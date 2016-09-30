@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) ThermoFisher Scientific Inc.- All Rights Reserved
+  ~ Unauthorized use or copying of this file, via any medium is strictly prohibited and will be subject to legal action.
+  ~ Proprietary and confidential
+  -->
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd">
+
+    <context:property-placeholder ignore-unresolvable="true" location="classpath:config/link.properties"/>
+
+    <jaxrs:server id="testServer" address="/v1">
+        <jaxrs:serviceBeans>
+            <ref bean="healthCheckApi"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <ref bean="jsonProvider"/>
+        </jaxrs:providers>
+    </jaxrs:server>
+    <bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
+</beans>
