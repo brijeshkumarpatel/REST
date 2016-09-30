@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dhap-test.iml" filepath="$PROJECT_DIR$/dhap-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dhap-test-api/dhap-test-api.iml" filepath="$PROJECT_DIR$/dhap-test-api/dhap-test-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dhap-test-server/dhap-test-server.iml" filepath="$PROJECT_DIR$/dhap-test-server/dhap-test-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dhap-test-service/dhap-test-service.iml" filepath="$PROJECT_DIR$/dhap-test-service/dhap-test-service.iml" />
+    </modules>
+  </component>
+</project>
